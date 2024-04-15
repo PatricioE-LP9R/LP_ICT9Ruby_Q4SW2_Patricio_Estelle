@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Events & Functions</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 60px;
+			background-color: #e0dede;
+		}
+		form {
+			width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 5px dashed #999494;
+			border-radius: 5px;
+			background-color: #bdb5b5;
+			text-align: center; 
+			float: right;
+
+		}
+		h1{
+			font-family:arial;
+			color:#3d4c6b;
+		}
+		h2{
+			font-family:arial;
+			color:#8f8482;
+			font-size:20px;
+			font-style:italic;
+		}
+		input[type="text"] {
+			width: 80%;
+			padding: 13px;
+			margin: 5px 0;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		input[type="submit"] {
+			width: 100%;
+			padding: 10px;
+			margin: 5px ;
+			border: none;
+			border-radius: 5px;
+			background-color: 6c7ca1;
+			color: #fff;
+			cursor: pointer;
+			font-family: Segoe UI Semibold;
+			font-size: 18px;
+			background-image:url('s.jpg') ;
+			background-repeat:no repeat;
+			background-attachment:fixed;
+			background-size:100% 100%;
+		}
+		input[type="submit"]:hover {
+			background-color: #434e69;
+		}
+		#button-container input{
+			width:550px;
+			height: 50px;
+			margin: 8px auto;
+			text-align: center; 
+			float:right;
+			clear:both;
+
+			
+		}
+		img {
+			width:600px ;
+			height:435px;
+			float: left;
+ 			margin-right: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+
+<img src="dog1.png">
+
+<form>
+	<h1>Hi, my name is PB. I'm here to calculate any math problem you give me.</h1>
+	<input type="text" placeholder="Enter the 1st number" id="id1"><br>
+	<input type="text" placeholder="Enter the 2nd number" id="id2"><br>
+	<h2>★ Choose from the operator buttons below how I will calculate the 2 numbers given.</h2>
+</form>
+
+<div id="button-container">
+	<input type="submit" value="Multiply" onclick="Compute()">
+	<input type="submit" value="Divide" onclick="Divide()" >
+	<input type="submit" value="Subtract" onclick="Subtraction()">
+	<input type="submit" value="Add" onclick="Addition()">
+</div>
+
+<script type="text/javascript">
+	function Compute() {
+		num1 = document.getElementById('id1').value;
+		num2 = document.getElementById('id2').value;
+		product = num1 * num2;
+		window.alert(product);
+	}
+	function Divide() {
+		num1 = document.getElementById('id1').value;
+		num2 = document.getElementById('id2').value;
+		quotient = num1 / num2;
+		window.alert(quotient);
+	}
+	function Subtraction() {
+		num1 = document.getElementById('id1').value;
+		num2 = document.getElementById('id2').value;
+		difference = num1 - num2;
+		window.alert(difference);
+	}
+
+	function Addition() {
+		num1 = Number(document.getElementById('id1').value);
+		num2 = Number(document.getElementById('id2').value);
+		sum = num1 + num2;
+		window.alert(sum);
+	}
+</script>
+</body>
+</html>
